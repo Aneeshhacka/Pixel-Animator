@@ -132,7 +132,7 @@ def save(frames):
                 pixel.draw_pixel(f)
             frames2.append(f)
 
-        if MB.askokcancel("Transparent background","Would you like to save this with a transparent background?"):
+        if MB.askyesno("Transparent background","Would you like to save this with a transparent background?"):
             sprite_sheet = pygame.Surface((len(frames2)*500,500), pygame.SRCALPHA, 32)
         else:
             sprite_sheet = pygame.Surface((len(frames2)*500,500), pygame.SRCALPHA, 32)
